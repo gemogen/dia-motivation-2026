@@ -280,6 +280,37 @@
     <div class="snum">07 / 09</div>
   </section>
 
+  <!-- инициативы развития -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="kicker">Пилар 3 · развитие</div>
+      <h2>Инициативы развития 2026 — и почему это не ИИ</h2>
+      <p class="sub">Инициатива — разовый проект с дедлайном и владельцем, двигающий дирекцию вперёд. Это не текущий выпуск контента, а изменение. Сейчас почти все инициативы — вокруг ИИ, но меряются они иначе.</p>
+      <div class="grid g2" style="margin-top:30px">
+        <div class="card amber">
+          <h3>Примеры инициатив</h3>
+          <ul>
+            <li>Переход розничных отчётов на one-pager к Q3</li>
+            <li>Расширение покрытия эмитентов через фабрику</li>
+            <li>Запуск факторного рейтинга BCS Rating в прод</li>
+            <li>Налаживание сбора индивидуального CSI</li>
+            <li>Внедрение системы измерения качества (LLM-as-judge)</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h3>Инициатива ≠ ИИ: один проект — два замера</h3>
+          <ul>
+            <li><b>Инициатива (пилар 3):</b> разовый проект доведён до вехи в срок — «доля отчётов на one-pager → Х% к Q3»</li>
+            <li><b>ИИ (пилар 4):</b> постоянная способность используется — «резюме генерятся ИИ, покрытие Y%, время на отчёт ↓»</li>
+          </ul>
+          <p style="margin-top:12px">Поэтому пилары не сливаем: инициативы меряют вехи, ИИ — постоянный результат. Задвоения нет.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum"></div>
+  </section>
+
   <!-- 8 -->
   <section class="slide">
     <div class="wrap">
@@ -324,10 +355,10 @@
 
 <div class="hud">
   <button id="prev" title="Назад">‹</button>
-  <span class="cnt"><span id="cur">01</span> / 09</span>
+  <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v3</span>
+  <span class="ver">v4</span>
 </div>
 
 <script>
@@ -354,6 +385,11 @@
   });
   const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){idx=slides.indexOf(en.target);paint();}})},{threshold:.55});
   slides.forEach(s=>io.observe(s));
+  (function(){
+    const tot=String(slides.length).padStart(2,'0');
+    const totEl=document.getElementById('tot'); if(totEl) totEl.textContent=tot;
+    slides.forEach((s,i)=>{const el=s.querySelector('.snum'); if(el) el.textContent=String(i+1).padStart(2,'0')+' / '+tot;});
+  })();
   window.addEventListener('load',()=>{
     const m=(location.hash||'').match(/^#s(\d+)$/);
     if(m){const i=parseInt(m[1],10)-1;if(i>=0&&i<slides.length){idx=i;slides[i].scrollIntoView({behavior:'auto'});}}
