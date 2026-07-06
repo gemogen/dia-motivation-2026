@@ -13,7 +13,7 @@
 <style>
   :root{
     --bg:#F7FAFD; --ink:#14233B; --muted:#5A6B84; --line:#E4EBF3;
-    --navy:#1F3A5F; --teal:#0EA37F; --amber:#DC8A1E; --purple:#6B5DD3; --coral:#E0566B;
+    --navy:#1F3A5F; --teal:#0EA37F; --amber:#DC8A1E; --purple:#6B5DD3; --coral:#E0566B; --forest:#3EA06B;
     --card:#FFFFFF;
     --pad-x:clamp(28px,5vw,88px);
     font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
@@ -67,16 +67,16 @@
   .legend{display:flex;gap:22px;flex-wrap:wrap;margin:24px 0 6px}
   .legend span{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;color:var(--ink)}
   .dot{width:14px;height:14px;border-radius:5px;display:inline-block}
-  .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)}
+  .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)} .d6{background:var(--forest)}
   .wrow{display:grid;grid-template-columns:230px 1fr;align-items:center;gap:22px;margin-top:16px}
   .wrow .rl{font-size:19px;font-weight:700;text-align:right}
   .wbar{display:flex;height:46px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
   .wbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px}
-  .wbar .s1{background:var(--navy)} .wbar .s2{background:var(--teal)} .wbar .s3{background:var(--amber)} .wbar .s4{background:var(--purple)} .wbar .s5{background:var(--coral)}
+  .wbar .s1{background:var(--navy)} .wbar .s2{background:var(--teal)} .wbar .s3{background:var(--amber)} .wbar .s4{background:var(--purple)} .wbar .s5{background:var(--coral)} .wbar .s6{background:var(--forest)}
   .note{margin-top:24px;font-size:16px;color:var(--muted);border-left:4px solid var(--amber);padding:12px 18px;background:#fff;border-radius:0 10px 10px 0;line-height:1.45}
   /* mini bar in card */
   .mini{display:flex;height:16px;border-radius:6px;overflow:hidden;margin:14px 0 4px}
-  .mini i{display:block} .mini .s1{background:var(--navy)} .mini .s2{background:var(--teal)} .mini .s3{background:var(--amber)} .mini .s4{background:var(--purple)}
+  .mini i{display:block} .mini .s1{background:var(--navy)} .mini .s2{background:var(--teal)} .mini .s3{background:var(--amber)} .mini .s4{background:var(--purple)} .mini .s6{background:var(--forest)}
   /* flow */
   .flow{display:flex;align-items:stretch;gap:0;margin-top:36px;flex-wrap:wrap}
   .step{flex:1;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;border-top:5px solid var(--teal);display:flex;flex-direction:column}
@@ -116,7 +116,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v12 · 06.07 17:31 МСК</div>
+<div class="build" id="build">сборка v13 · 06.07 17:51 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -166,10 +166,12 @@
         <span><i class="dot d3"></i>Инициативы</span>
         <span><i class="dot d4"></i>ИИ</span>
         <span><i class="dot d5"></i>Решение руководителя</span>
+        <span><i class="dot d6"></i>Результат портфелей</span>
       </div>
       <div class="wrow"><div class="rl">Глава дирекции</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div></div>
       <div class="wrow"><div class="rl">Руководители центров</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
       <div class="wrow"><div class="rl">Аналитики</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Классы активов</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
       <div class="wrow"><div class="rl">Редакторы</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
       <div class="note">Веса — черновик, на обсуждение. Поверх итога — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
     </div>
@@ -182,13 +184,13 @@
     <div class="wrap">
       <div class="kicker">Декомпозиция · ядро дирекции</div>
       <h2>Аналитики: базовая карта и пять вариантов</h2>
-      <p class="sub">База одна. Отличается только пилар «Качество» — «попадание» и «против рынка» считаются по-разному для акций, облигаций, валюты и портфеля.</p>
+      <p class="sub">База одна. Отличается только пилар «Качество» — «попадание в цель» считается по-разному для акций, облигаций, валюты и портфеля. Абсолютные цели, без сравнения с рынком.</p>
       <div class="grid g2">
         <div class="card teal">
           <h3>Базовая карта аналитика</h3>
           <div class="mini"><i class="s1" style="width:50%"></i><i class="s2" style="width:25%"></i><i class="s3" style="width:15%"></i><i class="s4" style="width:10%"></i></div>
           <ul>
-            <li>Качество идей — 50%: точность · против рынка · качество аналитики (разбивка — по вопросам №1 / №2)</li>
+            <li>Качество идей — 50%: точность попадания в цель (hit-rate) · качество аналитики (разбивка — по вопросу №2)</li>
             <li>CSI — 25%: каскад по центру / классу активов (командная)</li>
             <li>Инициативы — 15%: вклад в проекты развития</li>
             <li>ИИ — 10%: вклад в покрытие через фабрику</li>
@@ -199,13 +201,14 @@
           <ul>
             <li><b>РФ</b> (6) — эталон, полная база</li>
             <li><b>Мир</b> (3) — облегчённый, качество ↑ (idea-поток шумный)</li>
-            <li><b>Облигации</b> (2) — «цель» = доходность / спред, бенчмарк — облигационный индекс</li>
-            <li><b>Валюта</b> (2) — упор на точность направления (точность 40, против рынка убрать)</li>
-            <li><b>Портфельный</b> (1) — результат портфеля vs бенчмарк вместо hit-rate</li>
+            <li><b>Облигации</b> (2) — «цель» = абсолютная доходность / спред</li>
+            <li><b>Валюта</b> (2) — точность направления (абсолютная)</li>
+            <li><b>Портфельный</b> (1) — абсолютная целевая доходность портфеля</li>
+            <li><b>Классы активов</b> (1) — результат стратегий автоследования 30% + hit-rate идей 20%</li>
           </ul>
         </div>
       </div>
-      <div class="note">Сквозной вопрос: «точность попадания» и «против рынка» определить per-instrument — единая формула не работает.</div>
+      <div class="note">«Против рынка» убрана — все цели абсолютные. Определение «попадания» per-instrument: акции — таргет цены, облигации — доходность/спред, валюта — направление, портфель/классы активов — абсолютная доходность.</div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum">04 / 09</div>
@@ -321,7 +324,7 @@
       <h2>Одиннадцать вопросов для решения с Романом</h2>
       <p class="sub">Презентация не для утверждения сверху, а для совместного закрытия развилок. Веса и методология финализируются после этих решений.</p>
       <div class="qgrid">
-        <div class="q"><span class="n">1</span><div><b>Метрика попадания идей:</b> только точность попадания или ещё «против рынка»? Бенчмарк и горизонт.</div></div>
+        <div class="q"><span class="n">1</span><div><b>Метрика попадания идей:</b> «против рынка» убрана — только абсолютные цели (hit-rate). Определить формулу попадания per-instrument (акции, облигации, валюта).</div></div>
         <div class="q"><span class="n">2</span><div><b>Качество аналитики:</b> отдельный измеримый показатель или качественно (оценка рук. / CSI)?</div></div>
         <div class="q"><span class="n">3</span><div><b>CSI аналитика — как считать и чей контроль:</b> каскад по центрам / классам (индивидуального нет); справедлив ли вес на метрике, которую аналитик сам почти не двигает?</div></div>
         <div class="q"><span class="n">4</span><div><b>Переменная часть:</b> единый бонус или дифференцированный по ролям?</div></div>
@@ -361,7 +364,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v12</span>
+  <span class="ver">v13</span>
 </div>
 
 <script>
