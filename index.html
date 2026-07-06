@@ -116,7 +116,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v16 · 06.07 18:15 МСК</div>
+<div class="build" id="build">сборка v17 · 06.07 18:18 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -253,114 +253,44 @@
   <section class="slide">
     <div class="wrap">
       <div class="kicker">Методология · Примеры</div>
-      <h2>Шесть кейсов: что считается попаданием</h2>
-      <p class="sub">Зелёная зона — диапазон попадания. Пунктир — целевая. Точка — факт на конец срока (закрытие дня, с дивидендами).</p>
-      <div class="grid g3" style="margin-top:22px">
+      <h2 style="font-size:clamp(24px,3.5vw,36px)">Шесть кейсов: что считается попаданием</h2>
+      <p style="font-size:15px;color:var(--muted);margin:6px 0 0">Зелёная зона — диапазон попадания · пунктир — целевая · точка — факт на конец срока (total return, закрытие дня)</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px">
 
-        <!-- Buy ✓ -->
-        <div class="card navy" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">ЛУКОЙЛ · Buy</h3>
-            <span style="font-size:26px;color:#22A06B">✓</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="220" height="18" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="18" x2="220" y2="18" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
-            <text x="224" y="22" font-size="8" fill="#22A06B" font-weight="700">90%</text>
-            <line x1="0" y1="8" x2="220" y2="8" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,62 35,55 70,45 110,35 150,28 180,20 210,14" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="14" r="3.5" fill="#22A06B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 6000₽ → цель 7800₽ · факт 7300₽<br>Порог 7020₽ · <b style="color:#22A06B">7300 > 7020 ✓</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--navy)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">ЛУКОЙЛ · Buy</b><span style="font-size:22px;color:#22A06B">✓</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="200" height="12" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="12" x2="200" y2="12" stroke="#22A06B" stroke-dasharray="3 2" opacity=".5"/><line x1="0" y1="5" x2="200" y2="5" stroke="#22A06B" stroke-dasharray="2 2" opacity=".25"/><polyline points="0,40 30,36 65,30 100,24 140,18 170,13 195,9" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="9" r="3" fill="#22A06B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">6000→7800₽ · факт 7300<br>Порог 7020 · <b style="color:#22A06B">7300>7020</b></p>
         </div>
 
-        <!-- Buy ✗ -->
-        <div class="card navy" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">Газпром · Buy</h3>
-            <span style="font-size:26px;color:#E0566B">✗</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="220" height="16" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="16" x2="220" y2="16" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
-            <text x="224" y="20" font-size="8" fill="#22A06B" font-weight="700">90%</text>
-            <line x1="0" y1="6" x2="220" y2="6" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,35 35,33 70,38 110,48 150,56 180,62 210,68" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="68" r="3.5" fill="#E0566B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 150₽ → цель 195₽ · факт 130₽<br>Порог 175₽ · <b style="color:#E0566B">130 < 175 ✗</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--navy)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">Газпром · Buy</b><span style="font-size:22px;color:#E0566B">✗</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="200" height="10" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="10" x2="200" y2="10" stroke="#22A06B" stroke-dasharray="3 2" opacity=".5"/><line x1="0" y1="4" x2="200" y2="4" stroke="#22A06B" stroke-dasharray="2 2" opacity=".25"/><polyline points="0,22 30,21 65,25 100,32 140,37 170,42 195,46" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="46" r="3" fill="#E0566B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">150→195₽ · факт 130<br>Порог 175 · <b style="color:#E0566B">130&lt;175</b></p>
         </div>
 
-        <!-- Sell ✓ -->
-        <div class="card navy" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">Мечел · Sell</h3>
-            <span style="font-size:26px;color:#22A06B">✓</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="52" width="220" height="28" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="52" x2="220" y2="52" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
-            <text x="224" y="56" font-size="8" fill="#22A06B" font-weight="700">110%</text>
-            <line x1="0" y1="68" x2="220" y2="68" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,18 35,24 70,32 110,40 150,50 180,58 210,62" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="62" r="3.5" fill="#22A06B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 300₽ → цель 210₽ · факт 220₽<br>Порог 231₽ · <b style="color:#22A06B">220 < 231 ✓</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--navy)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">Мечел · Sell</b><span style="font-size:22px;color:#22A06B">✓</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="32" width="200" height="18" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="32" x2="200" y2="32" stroke="#22A06B" stroke-dasharray="3 2" opacity=".5"/><line x1="0" y1="43" x2="200" y2="43" stroke="#22A06B" stroke-dasharray="2 2" opacity=".25"/><polyline points="0,10 30,14 65,20 100,26 140,32 170,37 195,40" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="40" r="3" fill="#22A06B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">300→210₽ · факт 220<br>Порог 231 · <b style="color:#22A06B">220&lt;231</b></p>
         </div>
 
-        <!-- Sell ✗ -->
-        <div class="card navy" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">ВК · Sell</h3>
-            <span style="font-size:26px;color:#E0566B">✗</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="48" width="220" height="32" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="48" x2="220" y2="48" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
-            <text x="224" y="52" font-size="8" fill="#22A06B" font-weight="700">110%</text>
-            <line x1="0" y1="66" x2="220" y2="66" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,36 35,30 70,24 110,20 150,16 180,14 210,10" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="10" r="3.5" fill="#E0566B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 500₽ → цель 350₽ · факт 520₽<br>Порог 385₽ · <b style="color:#E0566B">520 > 385 ✗</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--navy)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">ВК · Sell</b><span style="font-size:22px;color:#E0566B">✗</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="30" width="200" height="20" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="30" x2="200" y2="30" stroke="#22A06B" stroke-dasharray="3 2" opacity=".5"/><line x1="0" y1="42" x2="200" y2="42" stroke="#22A06B" stroke-dasharray="2 2" opacity=".25"/><polyline points="0,24 30,20 65,16 100,12 140,9 170,7 195,4" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="4" r="3" fill="#E0566B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">500→350₽ · факт 520<br>Порог 385 · <b style="color:#E0566B">520>385</b></p>
         </div>
 
-        <!-- Hold ✓ -->
-        <div class="card teal" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">ГМК · Hold</h3>
-            <span style="font-size:26px;color:#22A06B">✓</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="22" width="220" height="36" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="22" x2="220" y2="22" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
-            <line x1="0" y1="58" x2="220" y2="58" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
-            <text x="224" y="26" font-size="8" fill="#22A06B" font-weight="700">110%</text>
-            <text x="224" y="62" font-size="8" fill="#22A06B" font-weight="700">90%</text>
-            <line x1="0" y1="40" x2="220" y2="40" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,38 35,42 70,46 110,44 150,40 180,43 210,44" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="44" r="3.5" fill="#22A06B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 150₽ → цель 155₽ · факт 148₽<br>Диапазон 139–170₽ · <b style="color:#22A06B">148 в зоне ✓</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--teal)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">ГМК · Hold</b><span style="font-size:22px;color:#22A06B">✓</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="14" width="200" height="22" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="14" x2="200" y2="14" stroke="#22A06B" stroke-dasharray="3 2" opacity=".4"/><line x1="0" y1="36" x2="200" y2="36" stroke="#22A06B" stroke-dasharray="3 2" opacity=".4"/><line x1="0" y1="25" x2="200" y2="25" stroke="#22A06B" stroke-dasharray="2 2" opacity=".2"/><polyline points="0,24 30,27 65,29 100,27 140,25 170,27 195,28" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="28" r="3" fill="#22A06B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">150→155₽ · факт 148<br>Зона 139–170 · <b style="color:#22A06B">148 в зоне</b></p>
         </div>
 
-        <!-- Hold ✗ -->
-        <div class="card teal" style="padding:16px 18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="font-size:17px;margin:0">Магнит · Hold</h3>
-            <span style="font-size:26px;color:#E0566B">✗</span>
-          </div>
-          <svg viewBox="0 0 220 80" style="width:100%;margin:6px 0 4px" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="22" width="220" height="36" fill="#22A06B" opacity=".12" rx="2"/>
-            <line x1="0" y1="22" x2="220" y2="22" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
-            <line x1="0" y1="58" x2="220" y2="58" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
-            <text x="224" y="26" font-size="8" fill="#22A06B" font-weight="700">110%</text>
-            <text x="224" y="62" font-size="8" fill="#22A06B" font-weight="700">90%</text>
-            <line x1="0" y1="40" x2="220" y2="40" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
-            <polyline points="0,38 35,34 70,28 110,20 150,14 180,10 210,6" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="210" cy="6" r="3.5" fill="#E0566B"/>
-          </svg>
-          <p style="font-size:12.5px;color:var(--muted);margin:0">Вход 5000₽ → цель 5200₽ · факт 6100₽<br>Диапазон 4680–5720₽ · <b style="color:#E0566B">6100 > 5720 ✗</b></p>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;border-top:4px solid var(--teal)">
+          <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:15px">Магнит · Hold</b><span style="font-size:22px;color:#E0566B">✗</span></div>
+          <svg viewBox="0 0 200 50" style="width:100%;height:50px;margin:4px 0" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="14" width="200" height="22" fill="#22A06B" opacity=".12" rx="2"/><line x1="0" y1="14" x2="200" y2="14" stroke="#22A06B" stroke-dasharray="3 2" opacity=".4"/><line x1="0" y1="36" x2="200" y2="36" stroke="#22A06B" stroke-dasharray="3 2" opacity=".4"/><line x1="0" y1="25" x2="200" y2="25" stroke="#22A06B" stroke-dasharray="2 2" opacity=".2"/><polyline points="0,24 30,21 65,17 100,12 140,8 170,5 195,3" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="3" r="3" fill="#E0566B"/></svg>
+          <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.35">5000→5200₽ · факт 6100<br>Зона 4680–5720 · <b style="color:#E0566B">6100>5720</b></p>
         </div>
 
       </div>
@@ -519,7 +449,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v16</span>
+  <span class="ver">v17</span>
 </div>
 
 <script>
