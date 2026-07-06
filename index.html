@@ -116,7 +116,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v14 · 06.07 18:09 МСК</div>
+<div class="build" id="build">сборка v15 · 06.07 18:11 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -241,6 +241,130 @@
           </ul>
           <p style="margin-top:16px"><b>Пример аннуализации:</b> позитивная идея, вход 100₽, целевая 130₽, срок 6 мес. Не закрыта. Цена на конец — 112₽ (+12%). Аннуализированный тренд → ~125₽. Порог = 117₽ (90% × 130). Тренд > порога → <b>попал</b>.</p>
         </div>
+      </div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum"></div>
+  </section>
+
+  <!-- примеры кейсов -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="kicker">Методология · Примеры</div>
+      <h2>Шесть кейсов: что считается попаданием</h2>
+      <p class="sub">Зелёная зона — диапазон попадания. Пунктир — целевая цена. Точка — факт на конец срока.</p>
+      <div class="grid g3" style="margin-top:24px">
+
+        <!-- 1. Buy ✓ -->
+        <div class="card navy" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">ЛУКОЙЛ · Buy</h3>
+            <span style="font-size:28px;color:#22A06B">✓</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="220" height="20" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="20" x2="220" y2="20" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
+            <text x="222" y="24" font-size="9" fill="#22A06B" font-weight="700">90%</text>
+            <line x1="0" y1="10" x2="220" y2="10" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <text x="222" y="14" font-size="9" fill="#22A06B" font-weight="600" opacity=".6">цель</text>
+            <polyline points="0,70 30,65 60,55 90,45 120,35 150,30 180,22 210,16" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="16" r="4" fill="#22A06B"/>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 6000₽ → цель 7800₽ · факт 7300₽<br>Порог 7020₽ (90%) · <b style="color:#22A06B">7300 > 7020</b></p>
+        </div>
+
+        <!-- 2. Buy ✗ -->
+        <div class="card navy" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">Газпром · Buy</h3>
+            <span style="font-size:28px;color:#E0566B">✗</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="220" height="18" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="18" x2="220" y2="18" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
+            <text x="222" y="22" font-size="9" fill="#22A06B" font-weight="700">90%</text>
+            <line x1="0" y1="8" x2="220" y2="8" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <polyline points="0,40 30,38 60,42 90,50 120,60 150,65 180,70 210,75" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="75" r="4" fill="#E0566B"/>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 150₽ → цель 195₽ · факт 130₽<br>Порог 175₽ (90%) · <b style="color:#E0566B">130 < 175</b></p>
+        </div>
+
+        <!-- 3. Sell ✓ -->
+        <div class="card navy" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">Мечел · Sell</h3>
+            <span style="font-size:28px;color:#22A06B">✓</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="60" width="220" height="30" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="60" x2="220" y2="60" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
+            <text x="222" y="64" font-size="9" fill="#22A06B" font-weight="700">110%</text>
+            <line x1="0" y1="78" x2="220" y2="78" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <text x="222" y="82" font-size="9" fill="#22A06B" font-weight="600" opacity=".6">цель</text>
+            <polyline points="0,20 30,25 60,35 90,40 120,50 150,58 180,65 210,70" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="70" r="4" fill="#22A06B"/>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 300₽ → цель 210₽ · факт 220₽<br>Порог 231₽ (110%) · <b style="color:#22A06B">220 < 231</b></p>
+        </div>
+
+        <!-- 4. Sell ✗ -->
+        <div class="card navy" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">ВК · Sell</h3>
+            <span style="font-size:28px;color:#E0566B">✗</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="55" width="220" height="35" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="55" x2="220" y2="55" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
+            <text x="222" y="59" font-size="9" fill="#22A06B" font-weight="700">110%</text>
+            <line x1="0" y1="75" x2="220" y2="75" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <polyline points="0,40 30,35 60,30 90,28 120,25 150,22 180,20 210,18" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="18" r="4" fill="#E0566B"/>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 500₽ → цель 350₽ · факт 520₽<br>Порог 385₽ (110%) · <b style="color:#E0566B">520 > 385</b></p>
+        </div>
+
+        <!-- 5. Buy ✓ аннуализация -->
+        <div class="card purple" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">Сбер · Buy · аннуализация</h3>
+            <span style="font-size:28px;color:#22A06B">✓</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="220" height="24" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="24" x2="220" y2="24" stroke="#22A06B" stroke-dasharray="4 3" opacity=".5"/>
+            <text x="222" y="28" font-size="9" fill="#22A06B" font-weight="700">90%</text>
+            <line x1="0" y1="12" x2="220" y2="12" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <polyline points="0,60 30,55 60,50 90,45 120,42 150,40 180,38 210,37" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="37" r="4" fill="var(--amber)"/>
+            <line x1="210" y1="37" x2="220" y2="18" stroke="var(--purple)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="220" cy="18" r="3" fill="var(--purple)" opacity=".6"/>
+            <text x="190" y="85" font-size="8.5" fill="var(--purple)" font-weight="700">тренд →</text>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 280₽ → цель 360₽ · факт 305₽ за 4 мес<br>Аннуализ. тренд → 362₽ · порог 324₽ · <b style="color:#22A06B">362 > 324</b></p>
+        </div>
+
+        <!-- 6. Hold ✓ -->
+        <div class="card teal" style="padding:18px 20px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="font-size:18px;margin:0">ГМК · Hold (нейтральная)</h3>
+            <span style="font-size:28px;color:#22A06B">✓</span>
+          </div>
+          <svg viewBox="0 0 220 90" style="width:100%;margin:8px 0 4px" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="25" width="220" height="40" fill="#22A06B" opacity=".1" rx="2"/>
+            <line x1="0" y1="25" x2="220" y2="25" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
+            <line x1="0" y1="65" x2="220" y2="65" stroke="#22A06B" stroke-dasharray="4 3" opacity=".4"/>
+            <text x="222" y="29" font-size="9" fill="#22A06B" font-weight="700">110%</text>
+            <text x="222" y="69" font-size="9" fill="#22A06B" font-weight="700">90%</text>
+            <line x1="0" y1="45" x2="220" y2="45" stroke="#22A06B" stroke-dasharray="2 2" opacity=".3"/>
+            <text x="222" y="49" font-size="9" fill="#22A06B" font-weight="600" opacity=".6">цель</text>
+            <polyline points="0,42 30,46 60,50 90,48 120,44 150,47 180,50 210,48" fill="none" stroke="var(--navy)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="210" cy="48" r="4" fill="#22A06B"/>
+          </svg>
+          <p style="font-size:13px;color:var(--muted);margin:0">Вход 150₽ → цель 155₽ · факт 148₽<br>Диапазон 139–170₽ · <b style="color:#22A06B">148 в зоне</b></p>
+        </div>
+
       </div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -397,7 +521,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v14</span>
+  <span class="ver">v15</span>
 </div>
 
 <script>
