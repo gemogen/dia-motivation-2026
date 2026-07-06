@@ -116,7 +116,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v11 · 06.07 17:27 МСК</div>
+<div class="build" id="build">сборка v12 · 06.07 17:31 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -361,56 +361,75 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v11</span>
+  <span class="ver">v12</span>
 </div>
 
 <script>
   const slides=Array.from(document.querySelectorAll('.slide'));
   const cur=document.getElementById('cur'), prog=document.getElementById('prog');
-  const prevB=document.getElementById('prev'), nextB=document.getElementById('next');
-  let idx=0;
+  var prevB=document.getElementById('prev'), nextB=document.getElementById('next');
+  var deck=document.getElementById('deck');
+  var idx=0;
+  var KEY='dia-mot-slide';
+
   function paint(){
     cur.textContent=String(idx+1).padStart(2,'0');
     prog.style.width=((idx+1)/slides.length*100)+'%';
     prevB.disabled=(idx===0); nextB.disabled=(idx===slides.length-1);
-    history.replaceState(null,'','#s'+(idx+1));
+    try{history.replaceState(null,'','#s'+(idx+1));}catch(e){}
   }
-  function go(i){idx=Math.max(0,Math.min(slides.length-1,i));slides[idx].scrollIntoView({behavior:'smooth'});}
-  nextB.onclick=()=>go(idx+1);
-  prevB.onclick=()=>go(idx-1);
+
+  function go(i){
+    idx=Math.max(0,Math.min(slides.length-1,i));
+    slides[idx].scrollIntoView({behavior:'smooth'});
+  }
+
+  function jumpTo(i){
+    idx=Math.max(0,Math.min(slides.length-1,i));
+    deck.style.scrollSnapType='none';
+    deck.style.scrollBehavior='auto';
+    slides[idx].scrollIntoView({behavior:'auto',block:'start'});
+    setTimeout(function(){slides[idx].scrollIntoView({behavior:'auto',block:'start'});},60);
+    setTimeout(function(){slides[idx].scrollIntoView({behavior:'auto',block:'start'});},150);
+    setTimeout(function(){
+      slides[idx].scrollIntoView({behavior:'auto',block:'start'});
+      deck.style.scrollSnapType='y mandatory';
+      deck.style.scrollBehavior='';
+      paint();
+    },300);
+  }
+
+  nextB.onclick=function(){go(idx+1);};
+  prevB.onclick=function(){go(idx-1);};
+
   document.getElementById('reload').onclick=function(){
+    try{sessionStorage.setItem(KEY,String(idx+1));}catch(e){}
     var base=location.href.split('?')[0].split('#')[0];
     location.href=base+'?t='+Date.now()+'#s'+(idx+1);
   };
-  window.addEventListener('keydown',e=>{
+
+  window.addEventListener('keydown',function(e){
     if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(idx+1);}
     if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();go(idx-1);}
   });
-  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){idx=slides.indexOf(en.target);paint();}})},{threshold:.55});
-  slides.forEach(s=>io.observe(s));
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){
+    if(en.isIntersecting){idx=slides.indexOf(en.target);paint();}
+  });},{threshold:.55});
+  slides.forEach(function(s){io.observe(s);});
+
   (function(){
-    const tot=String(slides.length).padStart(2,'0');
-    const totEl=document.getElementById('tot'); if(totEl) totEl.textContent=tot;
-    slides.forEach((s,i)=>{const el=s.querySelector('.snum'); if(el) el.textContent=String(i+1).padStart(2,'0')+' / '+tot;});
+    var tot=String(slides.length).padStart(2,'0');
+    var totEl=document.getElementById('tot'); if(totEl) totEl.textContent=tot;
+    slides.forEach(function(s,i){var el=s.querySelector('.snum'); if(el) el.textContent=String(i+1).padStart(2,'0')+' / '+tot;});
   })();
-  window.addEventListener('load',()=>{
-    const m=(location.hash||'').match(/^#s(\d+)$/);
-    if(m){
-      const i=parseInt(m[1],10)-1;
-      if(i>=0&&i<slides.length){
-        const deck=document.getElementById('deck');
-        deck.style.scrollSnapType='none';
-        idx=i;
-        slides[i].scrollIntoView({behavior:'auto'});
-        setTimeout(()=>{
-          slides[i].scrollIntoView({behavior:'auto'});
-          deck.style.scrollSnapType='y mandatory';
-          paint();
-        },120);
-      }
-    }
-    paint();
-  });
+
+  (function(){
+    var target=-1;
+    try{var stored=sessionStorage.getItem(KEY);if(stored){target=parseInt(stored,10)-1;sessionStorage.removeItem(KEY);}}catch(e){}
+    if(target<0){var m=(location.hash||'').match(/^#s(\d+)$/);if(m)target=parseInt(m[1],10)-1;}
+    if(target>=0&&target<slides.length){jumpTo(target);}else{paint();}
+  })();
 </script>
 </body>
 </html>
