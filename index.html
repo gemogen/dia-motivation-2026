@@ -27,17 +27,17 @@
   .deck{height:100vh;overflow-y:scroll;scroll-snap-type:y proximity;scroll-behavior:smooth}
   .slide{
     min-height:100vh;scroll-snap-align:start;overflow-y:auto;
-    padding:clamp(48px,6vh,72px) var(--pad-x);
+    padding:clamp(22px,3.2vh,36px) var(--pad-x);
     display:flex;flex-direction:column;justify-content:safe center;position:relative;
   }
   .wrap{width:100%;max-width:1180px;margin:0 auto}
   /* type */
-  .sect{display:inline-flex;align-items:center;gap:12px;padding:8px 18px;border-radius:999px;font-size:15px;font-weight:800;letter-spacing:.02em;color:#fff;margin-bottom:16px}
+  .sect{display:inline-flex;align-items:center;gap:12px;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:800;letter-spacing:.02em;color:#fff;margin-bottom:10px}
   .sect .sdot{width:12px;height:12px;border-radius:4px;background:rgba(255,255,255,.9)}
-  .kicker{font-size:15px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:18px}
+  .kicker{font-size:14px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:10px}
   h1{font-size:clamp(40px,6vw,66px);line-height:1.04;font-weight:900;letter-spacing:-.02em}
-  h2{font-size:clamp(30px,4.4vw,46px);line-height:1.08;font-weight:800;letter-spacing:-.02em}
-  .sub{font-size:clamp(17px,2vw,21px);color:var(--muted);margin-top:16px;max-width:60ch;line-height:1.45}
+  h2{font-size:clamp(28px,3.8vw,40px);line-height:1.06;font-weight:800;letter-spacing:-.02em}
+  .sub{font-size:clamp(15px,1.7vw,18px);color:var(--muted);margin-top:10px;max-width:64ch;line-height:1.4}
   /* cover */
   .cover .wrap{max-width:1120px}
   .brand{position:absolute;top:clamp(40px,6vh,64px);right:var(--pad-x);font-weight:900;letter-spacing:.06em;color:var(--navy);font-size:24px}
@@ -79,7 +79,7 @@
   .dense .card li{font-size:14.5px;margin-top:5px;padding-left:18px}
   .dense .card p{font-size:14px}
   .dense h2{font-size:clamp(24px,3.4vw,34px)}
-  .dense .sub{font-size:16px;margin-top:8px}
+  .dense .sub{font-size:15px;margin-top:6px}
   .calc{margin-top:16px;background:#F4F7FB;border:2px solid var(--navy);border-radius:12px;padding:14px 18px}
   .calc-head{font-size:15px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:10px;margin-bottom:10px}
   .calc-ico{display:inline-flex;width:26px;height:26px;background:var(--navy);color:#fff;border-radius:7px;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex:0 0 auto}
@@ -108,8 +108,8 @@
   .stepsv .n{flex:0 0 44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center}
   .stepsv b{font-size:20px;font-weight:800} .stepsv p{font-size:17px;color:var(--muted);margin-top:3px;line-height:1.4}
   /* footer */
-  .foot{position:absolute;left:var(--pad-x);bottom:26px;font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.02em}
-  .snum{position:absolute;right:var(--pad-x);bottom:26px;font-size:14px;color:var(--muted);font-weight:700}
+  .foot{position:absolute;left:var(--pad-x);bottom:14px;font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+  .snum{position:absolute;right:var(--pad-x);bottom:14px;font-size:14px;color:var(--muted);font-weight:700}
   /* HUD + progress */
   .bar{position:fixed;top:0;left:0;right:0;height:4px;background:rgba(20,35,59,.08);z-index:40}
   .bar>i{display:block;height:100%;width:0;background:var(--teal);transition:width .35s}
@@ -129,7 +129,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v49 · 07.07 15:00 МСК</div>
+<div class="build" id="build">сборка v50 · 07.07 15:08 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -298,7 +298,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--purple)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Buy / Позитивный · досрочно</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#22A06B"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -323,7 +323,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--teal)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Hold / Нейтральный · полный срок</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#22A06B"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -347,7 +347,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--navy)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Sell / Негативный · полный срок</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#22A06B"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -368,7 +368,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--navy)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Buy / Позитивный · полный срок</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#E0566B"/><path d="M8.3 8.3l7.4 7.4M15.7 8.3l-7.4 7.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -390,7 +390,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--teal)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Hold / Нейтральный · полный срок</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#E0566B"/><path d="M8.3 8.3l7.4 7.4M15.7 8.3l-7.4 7.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -414,7 +414,7 @@
 
         <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 10px;border-top:3px solid var(--purple)">
           <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:13px">Sell / Негативный · досрочно</b><svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#E0566B"/><path d="M8.3 8.3l7.4 7.4M15.7 8.3l-7.4 7.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></div>
-          <svg viewBox="0 0 230 108" style="width:100%;height:186px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 230 108" style="width:100%;height:170px;margin:2px 0 0" xmlns="http://www.w3.org/2000/svg">
 <line x1="28" y1="3" x2="28" y2="98" stroke="var(--line)" stroke-width="1"/>
 <line x1="28" y1="96" x2="212" y2="96" stroke="var(--line)" stroke-width="1"/>
 <text x="25" y="99" font-size="7" fill="var(--muted)" text-anchor="end" font-weight="600">0</text>
@@ -570,53 +570,53 @@
       <p class="sub">Инициативы — это <b>change</b> (проекты развития с вехами и сроками), а не <b>run</b> (текущий выпуск). 10 крупнейших задач дорожной карты.</p>
       <div style="margin-top:8px">
         <div style="font-size:13px;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:.04em;margin:2px 0 0">III квартал 2026</div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">15.07</span>
           <span style="font-size:14px">Подписание SLA с заказчиками — запуск сервисной модели</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">процесс</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.08</span>
           <span style="font-size:14px">Ежеквартальный отчёт на Инвесткомитет о кол-ве и качестве идей</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">5 колонн</span>
         </div>
         <div style="font-size:13px;font-weight:800;color:var(--amber);text-transform:uppercase;letter-spacing:.04em;margin:8px 0 0">IV квартал 2026</div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.10</span>
           <span style="font-size:14px">Дэшборд количества и качества идей и сигналов</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">5 колонн</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.10</span>
           <span style="font-size:14px">Дэшборд статуса исполнения SLA</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">3 колонны</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.10</span>
           <span style="font-size:14px">Покрытие зарубежного Fixed Income (US и др. юрисдикции)</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">Дубай</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.12</span>
           <span style="font-size:14px">Рэнкинги активов + квант-стратегии — BCS Rating</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">все колонны</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">01.12</span>
           <span style="font-size:14px">Единый источник идей и сигналов + API для СП и СК</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">Капитал</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">31.12</span>
           <span style="font-size:14px">Расширение покрытия Tier-1 бумаг США</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">Брокер</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">31.12</span>
           <span style="font-size:14px">ML/ИИ-модели (LLM) для идей на международные активы</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">ИББ</span>
         </div>
-        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:3px 0;border-bottom:1px solid var(--line)">
+        <div style="display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:2px 0;border-bottom:1px solid var(--line)">
           <span style="font-family:monospace;font-size:13px;font-weight:700;color:var(--amber)">31.12</span>
           <span style="font-size:14px">Внедрение ИИ в аналитику — флагманский проект</span>
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">вся ДИА</span>
@@ -651,16 +651,16 @@
             <p style="font-size:14px;font-weight:700;margin:0 0 4px">10 субагентов ИИ</p>
             <p style="font-size:12.5px;color:var(--muted);margin:0 0 6px;line-height:1.4">Специализированные ассистенты, каждый со своей инструкцией, для регулярного обязательного применения:</p>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">1</span>Генератор one-pager</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">2</span>Проверка фактов</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">3</span>Скрининг новостей по эмитентам</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">4</span>Извлечение данных из отчётности</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">5</span>Редактор-корректор под розницу</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">6</span>Переводчик международной аналитики</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">7</span>Оценщик качества (LLM-judge)</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">8</span>Предредактура материала перед редактором</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">9</span>Генератор черновика инвестидеи</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;padding:6px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">10</span>Ретро-анализ точности идей (hit-rate)</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">1</span>Генератор one-pager</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">2</span>Проверка фактов</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">3</span>Скрининг новостей по эмитентам</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">4</span>Извлечение данных из отчётности</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">5</span>Редактор-корректор под розницу</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">6</span>Переводчик международной аналитики</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">7</span>Оценщик качества (LLM-judge)</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">8</span>Предредактура материала перед редактором</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">9</span>Генератор черновика инвестидеи</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0"><span style="flex:0 0 22px;height:22px;border-radius:6px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">10</span>Ретро-анализ точности идей (hit-rate)</div>
             </div>
           </div>
           <div>
@@ -825,7 +825,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v49</span>
+  <span class="ver">v50</span>
 </div>
 
 <script>
