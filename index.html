@@ -118,7 +118,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v29 · 07.07 11:46 МСК</div>
+<div class="build" id="build">сборка v30 · 07.07 12:02 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -450,20 +450,28 @@
     <div class="wrap">
       <div class="sect" style="background:var(--teal)"><span class="sdot"></span>Компонент 2 · Удовлетворённость (CSI)</div>
       <h2>CSI: удовлетворённость заказчиков</h2>
-      <p class="sub">Насколько внутренние и внешние клиенты довольны продуктом дирекции. Две составляющие.</p>
-      <div class="grid g2">
+      <p class="sub">Две равные половины компонента: <b>Исполнение SLA — 50%</b> и <b>Индекс удовлетворённости — 50%</b>.</p>
+      <div class="grid g2" style="align-items:start">
         <div class="card teal">
-          <h3>Исполнение SLA</h3>
-          <p>SLA (service level agreement — соглашение об уровне сервиса, договорённость о сроках и объёме) — доля запросов и материалов, выпущенных в срок.</p>
+          <h3>Исполнение SLA — 50%</h3>
+          <p style="margin-bottom:8px">SLA (service level agreement — соглашение об уровне сервиса) — это <b>чек-лист сервисных обязательств дирекции перед заказчиками</b>. Исполнение = доля выполненных обязательств (порог 80%, кэп 100%).</p>
+          <p style="font-size:14px;font-weight:700;margin-bottom:2px">4 типа обязательств:</p>
+          <ul>
+            <li><b>Объём / покрытие</b> — «≥24 идеи в год», «25 ликвидных бумаг»</li>
+            <li><b>Регулярная активность</b> — «звонки ФС еженедельно»</li>
+            <li><b>Наличие продукта</b> — «7 портфелей», «лист бондов 30–50 имён»</li>
+            <li><b>Performance</b> — «60% успешных идей», «доходность ≥ бенчмарк»</li>
+          </ul>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px">Контроль: Дубай — ежемесячно; Брокер, Капитал, Сети, ИББ — квартально. Годовые объёмы разбиты на промежуточные вехи. Каскад по центрам. Метрика командная.</p>
         </div>
         <div class="card teal">
-          <h3>Индекс удовлетворённости</h3>
-          <p>Оценка заказчиков по качеству, полезности и подаче материалов. Собирается опросом.</p>
+          <h3>Индекс удовлетворённости — 50%</h3>
+          <p>Прямая оценка заказчиков по качеству, полезности и подаче материалов. Собирается опросом.</p>
+          <div style="margin-top:10px;background:#F0FBF7;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:10px 14px">
+            <b style="color:var(--amber);font-size:13px">Детализируем на следующем шаге</b>
+            <p style="font-size:13px;color:var(--ink);margin:3px 0 0;line-height:1.4">Открытый вопрос: индивидуальный CSI есть только у персброкера (акции РФ + облигации), у остальных — каскад по центру (вопрос №3 Роману).</p>
+          </div>
         </div>
-      </div>
-      <div style="margin-top:16px;background:#F0FBF7;border:1px solid #B8E6D5;border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:14px 18px">
-        <b style="color:var(--teal);font-size:14px">На обсуждении</b>
-        <p style="font-size:14px;color:var(--ink);margin:4px 0 0;line-height:1.45">Индивидуальный CSI есть только у персброкера (акции РФ + облигации). У остальных аналитиков CSI каскадируется по центру. Вопрос: строить ли индивидуальный сбор — вопрос №3 Роману. Детали компонента добьём отдельно.</p>
       </div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -669,7 +677,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v29</span>
+  <span class="ver">v30</span>
 </div>
 
 <script>
