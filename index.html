@@ -80,8 +80,12 @@
   .dense .card p{font-size:14px}
   .dense h2{font-size:clamp(24px,3.4vw,34px)}
   .dense .sub{font-size:16px;margin-top:8px}
-  .calc{margin-top:14px;background:#EEF2F7;border-left:4px solid var(--navy);border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;color:var(--ink);line-height:1.45}
-  .calc b{color:var(--navy)}
+  .calc{margin-top:16px;background:#F4F7FB;border:2px solid var(--navy);border-radius:12px;padding:14px 18px}
+  .calc-head{font-size:15px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .calc-ico{display:inline-flex;width:26px;height:26px;background:var(--navy);color:#fff;border-radius:7px;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex:0 0 auto}
+  .calc-f{font-size:15px;font-weight:700;color:var(--ink);background:#fff;border-radius:8px;padding:10px 14px;margin-bottom:10px;border:1px solid var(--line)}
+  .calc-d{font-size:13px;color:#5A6472;line-height:1.55}
+  .calc-d b{color:var(--navy)}
   .note{margin-top:24px;font-size:16px;color:var(--muted);border-left:4px solid var(--amber);padding:12px 18px;background:#fff;border-radius:0 10px 10px 0;line-height:1.45}
   /* mini bar in card */
   .mini{display:flex;height:16px;border-radius:6px;overflow:hidden;margin:14px 0 4px}
@@ -125,7 +129,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v46 · 07.07 14:43 МСК</div>
+<div class="build" id="build">сборка v47 · 07.07 14:48 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -279,7 +283,7 @@
         </div>
       </div>
     </div>
-      <div class="calc"><b>Как считается:</b> hit-rate = идеи, попавшие в цель ÷ все идеи за период. Buy ≥90%, Sell ≤110%, Hold 90–110% целевой; незакрытые — аннуализация тренда.</div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">hit-rate = идеи, попавшие в цель ÷ все оценённые идеи за период</div><div class="calc-d"><b>Критерии попадания:</b> Buy ≥ 90% целевой · Sell ≤ 110% · Hold 90–110%. <b>Замер</b> — на конец срока по цене закрытия дня, в полной доходности (с дивидендами). <b>Незакрытые идеи</b> — фактический рост аннуализируется (оценка тренда к цели). Минимум 1 месяц. <b>Источник данных:</b> Bloomberg + внутренний трекинг идей.</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum"></div>
   </section>
@@ -517,7 +521,7 @@
         </div>
       </div>
     </div>
-      <div class="calc"><b>Как считается:</b> CSI = 50% исполнение SLA (доля выполненных обязательств) + 50% индекс удовлетворённости (1–5, средневзвеш. по аллокации затрат).</div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">CSI = 50% Исполнение SLA + 50% Индекс удовлетворённости</div><div class="calc-d"><b>SLA</b> — доля выполненных сервисных обязательств (4 типа: объём, активность, продукт, performance); контроль: Дубай ежемесячно, остальные квартально. <b>Индекс</b> — оценка 1–5 неанонимно, средневзвешенная по аллокации затрат: индекс колонны = Σ(оценка бизнеса × доля затрат бизнеса); KPI по БКС = Σ(индекс колонны × доля затрат колонны).</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum"></div>
   </section>
@@ -618,7 +622,7 @@
           <span style="font-size:11px;color:var(--muted);background:#F4F6F9;border-radius:6px;padding:2px 8px;white-space:nowrap">вся ДИА</span>
         </div>
       </div>
-      <div class="calc"><b>Как считается:</b> KPI = задачи, реализованные с задержкой ≤ 30 дней ÷ все задачи периода. В срок или опоздание до 30 дней — засчитано; свыше — нет.</div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">KPI = задачи, реализованные с задержкой ≤ 30 дней ÷ все задачи периода</div><div class="calc-d">В срок или опоздание до 30 дней — засчитано; свыше 30 дней или не сделано — не засчитано. <b>Инициатива</b> = change (проект развития с вехой и сроком), а не run (текущий выпуск контента). <b>Источник данных:</b> трекер дорожной карты ДИА 2026.</div></div>
       <p style="font-size:12px;color:var(--muted);margin-top:12px">Источник: дорожная карта ДИА 2026 (трекер реализации). Колонка справа — охват заказчиков.</p>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -667,7 +671,7 @@
         </div>
       </div>
     </div>
-      <div class="calc"><b>Как считается:</b> KPI = вехи проекта «Аналитика на базе ИИ», достигнутые в срок ÷ все вехи периода.</div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">KPI = вехи проекта «Аналитика на базе ИИ» в срок ÷ все вехи периода</div><div class="calc-d">Методика зеркальна инициативам — измеряется исполнение план-графика проекта. <b>Два направления:</b> проект-фабрика (change) + развитие ИИ как постоянной способности (10 субагентов, база знаний ДИА). <b>Источник данных:</b> план-график проекта «Аналитика на базе ИИ».</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum"></div>
   </section>
@@ -765,7 +769,7 @@
       </div>
       <div class="note">«Выполнение задач развития» — метрика активности. Привязываем к измеримому росту качества, а не к закрытию задач.</div>
     </div>
-      <div class="calc"><b>Как считается:</b> Решение руководителя (50% карты редактора) = оценка руководителя по критериям — качество редактуры и подачи, соблюдение сроков, соответствие формату.</div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">Решение руководителя (50% карты редактора) = балл руководителя по критериям</div><div class="calc-d"><b>Критерии оценки:</b> качество редактуры и подачи материала, соблюдение сроков выпуска, соответствие формату и стандартам. Субъективная оценка внутри карты (в отличие от общего множителя поверх всей карты). <b>Источник:</b> оценка непосредственного руководителя.</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum">06 / 09</div>
   </section>
@@ -822,7 +826,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v46</span>
+  <span class="ver">v47</span>
 </div>
 
 <script>
