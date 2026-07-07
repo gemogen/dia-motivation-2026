@@ -70,12 +70,12 @@
   .legend span{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;color:var(--ink)}
   .dot{width:14px;height:14px;border-radius:5px;display:inline-block}
   .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)} .d6{background:var(--forest)}
-  .wrow{display:grid;grid-template-columns:230px 50px 1fr 162px;align-items:center;gap:16px;margin-top:9px}
-  .wrow .rl{font-size:19px;font-weight:700;text-align:right}
-  .wrow .rc{font-size:17px;font-weight:800;color:var(--navy);text-align:center}
+  .wrow{display:grid;grid-template-columns:230px 34px 1fr;align-items:center;gap:12px;margin-top:3px}
+  .wrow .rl{font-size:14px;font-weight:700;text-align:right;line-height:1.15}
+  .wrow .rc{font-size:14px;font-weight:800;color:var(--navy);text-align:center}
   .wrow .rc small{font-size:10px;color:var(--muted);font-weight:600;display:block;margin-top:-2px}
-  .wbar{display:flex;height:40px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
-  .wbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px}
+  .wbar{display:flex;height:21px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
+  .wbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:11px}
   .wbar .s1{background:var(--navy)} .wbar .s2{background:var(--teal)} .wbar .s3{background:var(--amber)} .wbar .s4{background:var(--purple)} .wbar .s5{background:var(--coral)} .wbar .s6{background:var(--forest)}
   .dense .card h3{font-size:19px;margin-bottom:6px}
   .dense .card li{font-size:14.5px;margin-top:5px;padding-left:18px}
@@ -131,7 +131,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v71 · 07.07 18:31 МСК</div>
+<div class="build" id="build">сборка v72 · 07.07 18:44 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -174,7 +174,6 @@
     <div class="wrap">
       <div class="kicker">Логика каскада</div>
       <h2>Как четыре составляющих спускаются по ролям</h2>
-      <p class="sub">Принцип: чем ниже роль — тем больше вес на личный контролируемый результат. Вес ИИ заметен у всех.</p>
       <div class="legend">
         <span><i class="dot d1"></i>Качество</span>
         <span><i class="dot d2"></i>CSI</span>
@@ -184,12 +183,21 @@
         <span><i class="dot d6"></i>Результат портфелей</span>
       </div>
       <div class="wrow"><div class="rl">Глава дирекции</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div></div>
-      <div class="wrow"><div class="rl">Руководители центров</div><div class="rc">2</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
-      <div class="wrow"><div class="rl">Аналитики</div><div class="rc">13</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div><span style="align-self:center;justify-self:start;display:inline-flex;align-items:center;gap:6px;background:#FDF1F3;border:1.5px solid var(--coral);border-radius:9px;padding:5px 12px;white-space:nowrap;box-shadow:0 1px 4px rgba(224,86,107,.18)"><span style="font-size:18px;font-weight:900;color:var(--coral);line-height:1">×</span><span style="display:flex;flex-direction:column;line-height:1.12"><span style="font-size:12.5px;font-weight:800;color:var(--coral)">гигиена</span><span style="font-size:10px;font-weight:600;color:var(--coral);opacity:.85">дисконт до 40%</span></span></span></div>
-      <div class="wrow"><div class="rl">Классы активов</div><div class="rc">2</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
-      <div class="wrow"><div class="rl">Редакторы</div><div class="rc">9</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
-      <div class="wrow"><div class="rl" style="color:var(--muted)">Продукт и развитие</div><div class="rc" style="color:var(--muted)">5</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:13px;font-weight:600">веса на проработке</div></div>
-      <div class="note">Число у роли — сотрудников в ней (всего 15 ролей, 32 человека; детально — в файле ролей). «Продукт и развитие» объединяет 5 ролей руководства/продукта, веса по ним не заданы. Веса — черновик, на обсуждение. Поверх итога — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Руководитель продаж</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
+      <div class="wrow"><div class="rl">Аналитик · Классы активов</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Руководитель развития проектов</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Директор по продукту</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Аналитик · Качество продукта</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
+      <div class="wrow"><div class="rl">Редактор-переводчик</div><div class="rc">9</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
+      <div class="wrow"><div class="rl">Руководитель центра РФ</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
+      <div class="wrow"><div class="rl">Аналитик РФ</div><div class="rc">6</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Портфельный аналитик</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Руководитель центра Мир</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
+      <div class="wrow"><div class="rl">Аналитик Мир</div><div class="rc">3</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Аналитик Облигации</div><div class="rc">2</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Аналитик Валюта</div><div class="rc">2</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
+      <div class="wrow"><div class="rl">Аналитик · Качество продукта 1</div><div class="rc">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
+      <div class="note">Все 15 ролей дирекции, 32 человека. Число — сотрудников в роли. Пустые бары — веса ещё не заданы. У аналитиков поверх итога действует дисконт «аналитическая гигиена» (отдельный слайд). Веса — черновик; поверх — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum">03 / 09</div>
@@ -828,7 +836,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v71</span>
+  <span class="ver">v72</span>
 </div>
 
 <script>
