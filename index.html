@@ -123,7 +123,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v40 · 07.07 13:01 МСК</div>
+<div class="build" id="build">сборка v41 · 07.07 13:04 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -790,7 +790,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v40</span>
+  <span class="ver">v41</span>
 </div>
 
 <script>
@@ -808,13 +808,20 @@
     try{history.replaceState(null,'','#s'+(idx+1));}catch(e){}
   }
 
+  var navLock=false, navTimer=null;
+
   function go(i){
     idx=Math.max(0,Math.min(slides.length-1,i));
-    slides[idx].scrollIntoView({behavior:'smooth'});
+    navLock=true;                      // на время прокрутки наблюдатель не перебивает счётчик
+    clearTimeout(navTimer);
+    slides[idx].scrollIntoView({behavior:'smooth',block:'start'});
+    navTimer=setTimeout(function(){navLock=false;},500);
+    paint();
   }
 
   function jumpTo(i){
     idx=Math.max(0,Math.min(slides.length-1,i));
+    navLock=true;
     deck.style.scrollSnapType='none';
     deck.style.scrollBehavior='auto';
     slides[idx].scrollIntoView({behavior:'auto',block:'start'});
@@ -824,6 +831,7 @@
       slides[idx].scrollIntoView({behavior:'auto',block:'start'});
       deck.style.scrollSnapType='y proximity';
       deck.style.scrollBehavior='';
+      navLock=false;
       paint();
     },300);
   }
@@ -843,7 +851,7 @@
   });
 
   var io=new IntersectionObserver(function(es){es.forEach(function(en){
-    if(en.isIntersecting){idx=slides.indexOf(en.target);paint();}
+    if(en.isIntersecting && !navLock){idx=slides.indexOf(en.target);paint();}
   });},{threshold:.55});
   slides.forEach(function(s){io.observe(s);});
 
