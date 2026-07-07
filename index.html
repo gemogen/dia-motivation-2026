@@ -32,6 +32,8 @@
   }
   .wrap{width:100%;max-width:1180px;margin:0 auto}
   /* type */
+  .sect{display:inline-flex;align-items:center;gap:12px;padding:8px 18px;border-radius:999px;font-size:15px;font-weight:800;letter-spacing:.02em;color:#fff;margin-bottom:16px}
+  .sect .sdot{width:12px;height:12px;border-radius:4px;background:rgba(255,255,255,.9)}
   .kicker{font-size:15px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:18px}
   h1{font-size:clamp(40px,6vw,66px);line-height:1.04;font-weight:900;letter-spacing:-.02em}
   h2{font-size:clamp(30px,4.4vw,46px);line-height:1.08;font-weight:800;letter-spacing:-.02em}
@@ -116,7 +118,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v25 · 07.07 11:09 МСК</div>
+<div class="build" id="build">сборка v26 · 07.07 11:21 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -182,8 +184,8 @@
   <!-- методология качества -->
   <section class="slide">
     <div class="wrap">
-      <div class="kicker">Методология · Пилар 1</div>
-      <h2>Как считается точность попадания (hit-rate)</h2>
+      <div class="sect" style="background:var(--navy)"><span class="sdot"></span>Компонент 1 · Качество идей</div>
+      <h2>Качество идей: как считается точность попадания</h2>
       <p class="sub">Инвестидея = рекомендация + целевая цена + срок. Hit-rate = доля идей, попавших в целевой диапазон, от общего числа за период.</p>
       <div class="grid g2">
         <div class="card navy">
@@ -206,8 +208,12 @@
             <li><b>Негативная</b> (Sell): цена ≤ 110% от целевой → попал</li>
             <li><b>Нейтральная</b> (Hold): цена в диапазоне 90–110% от целевой → попал</li>
           </ul>
-          <p style="margin-top:16px"><b>Пример аннуализации:</b> позитивная идея, вход 100₽, целевая 130₽, срок 6 мес. Не закрыта. Цена на конец — 112₽ (+12%). Аннуализированный тренд → ~125₽. Порог = 117₽ (90% × 130). Тренд > порога → <b>попал</b>.</p>
+          <p style="margin-top:14px"><b>Пример аннуализации:</b> вход 100₽, целевая 130₽, срок 6 мес. Цена на конец — 112₽. Аннуализированный тренд → ~125₽. Порог 117₽ (90%). Тренд > порога → <b>попал</b>.</p>
         </div>
+      </div>
+      <div style="margin-top:16px;background:#FFF8EC;border:1px solid #F0D9A8;border-left:4px solid var(--amber);border-radius:0 10px 10px 0;padding:14px 18px">
+        <b style="color:var(--amber);font-size:14px">Предложение на обсуждение — корзинный подход</b>
+        <p style="font-size:14px;color:var(--ink);margin:4px 0 0;line-height:1.45">Динамику «против рынка» вернуть не по каждой идее (в БКС не любят относительные метрики), а на уровне <b>корзины</b>: все Buy-идеи собираются в портфель — смотрим опережение рынка; все Sell — смотрим отставание от рынка. Портфельный взгляд на альфу, а не поштучный.</p>
       </div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -217,7 +223,7 @@
     <!-- примеры кейсов -->
   <section class="slide">
     <div class="wrap">
-      <div class="kicker">Методология · Примеры</div>
+      <div class="sect" style="background:var(--navy)"><span class="sdot"></span>Компонент 1 · Качество идей</div>
       <h2 style="font-size:clamp(22px,3vw,32px)">Шесть кейсов: попал / не попал</h2>
       <p style="font-size:13px;color:var(--muted);margin:3px 0 0">Верхний ряд — успешные идеи, нижний — нет · зелёная зона — попадание · <span style="color:var(--purple);font-weight:700">фиолетовый пунктир</span> — аннуализация при досрочном закрытии · total return, закрытие дня</p>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px">
@@ -368,6 +374,83 @@
     <div class="snum"></div>
   </section>
 
+  <!-- компонент CSI -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="sect" style="background:var(--teal)"><span class="sdot"></span>Компонент 2 · Удовлетворённость (CSI)</div>
+      <h2>CSI: удовлетворённость заказчиков</h2>
+      <p class="sub">Насколько внутренние и внешние клиенты довольны продуктом дирекции. Две составляющие.</p>
+      <div class="grid g2">
+        <div class="card teal">
+          <h3>Исполнение SLA</h3>
+          <p>SLA (service level agreement — соглашение об уровне сервиса, договорённость о сроках и объёме) — доля запросов и материалов, выпущенных в срок.</p>
+        </div>
+        <div class="card teal">
+          <h3>Индекс удовлетворённости</h3>
+          <p>Оценка заказчиков по качеству, полезности и подаче материалов. Собирается опросом.</p>
+        </div>
+      </div>
+      <div style="margin-top:16px;background:#F0FBF7;border:1px solid #B8E6D5;border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:14px 18px">
+        <b style="color:var(--teal);font-size:14px">На обсуждении</b>
+        <p style="font-size:14px;color:var(--ink);margin:4px 0 0;line-height:1.45">Индивидуальный CSI есть только у персброкера (акции РФ + облигации). У остальных аналитиков CSI каскадируется по центру. Вопрос: строить ли индивидуальный сбор — вопрос №3 Роману. Детали компонента добьём отдельно.</p>
+      </div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum"></div>
+  </section>
+
+  <!-- инициативы развития -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="sect" style="background:var(--amber)"><span class="sdot"></span>Компонент 3 · Инициативы</div>
+      <h2>Инициативы развития 2026 — и почему это не ИИ</h2>
+      <p class="sub">Инициатива — разовый проект с дедлайном и владельцем, двигающий дирекцию вперёд. Это не текущий выпуск контента, а изменение. Сейчас почти все инициативы — вокруг ИИ, но меряются они иначе.</p>
+      <div class="grid g2" style="margin-top:30px">
+        <div class="card amber">
+          <h3>Примеры инициатив</h3>
+          <ul>
+            <li>Переход розничных отчётов на one-pager к Q3</li>
+            <li>Расширение покрытия эмитентов через фабрику</li>
+            <li>Запуск факторного рейтинга BCS Rating в прод</li>
+            <li>Налаживание сбора индивидуального CSI</li>
+            <li>Внедрение системы измерения качества (LLM-as-judge)</li>
+          </ul>
+        </div>
+        <div class="card purple">
+          <h3>Инициатива ≠ ИИ: один проект — два замера</h3>
+          <ul>
+            <li><b>Инициатива (пилар 3):</b> разовый проект доведён до вехи в срок — «доля отчётов на one-pager → Х% к Q3»</li>
+            <li><b>ИИ (пилар 4):</b> постоянная способность используется — «резюме генерятся ИИ, покрытие Y%, время на отчёт ↓»</li>
+          </ul>
+          <p style="margin-top:12px">Поэтому пилары не сливаем: инициативы меряют вехи, ИИ — постоянный результат. Задвоения нет.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum"></div>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <div class="wrap">
+      <div class="sect" style="background:var(--purple)"><span class="sdot"></span>Компонент 4 · Внедрение ИИ</div>
+      <h2>Конвейер one-pager на базе ИИ</h2>
+      <p class="sub">Формат: одностраничное резюме к большому отчёту, сам отчёт остаётся. Розница читает саммари — глубина сохраняется.</p>
+      <div class="flow">
+        <div class="step purple"><div class="st">ИИ</div><h4>Генерация резюме</h4><p>Черновик one-pager из полного отчёта.</p></div>
+        <div class="arrow">→</div>
+        <div class="step teal"><div class="st">Аналитик</div><h4>Проверка фактов</h4><p>Смысл и рекомендация — его ответственность.</p></div>
+        <div class="arrow">→</div>
+        <div class="step navy"><div class="st">Редактор</div><h4>Доводка подачи</h4><p>Ясность и формат под розницу.</p></div>
+        <div class="arrow">→</div>
+        <div class="step amber"><div class="st">Выпуск</div><h4>Публикация</h4><p>Готовый one-pager клиенту.</p></div>
+      </div>
+      <div class="note">Качество ИИ-резюме меряется автоматически (LLM-as-judge: релевантность, формат, тон) — дёшево и снимает вопрос ручного балла за качество.</div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum">07 / 09</div>
+  </section>
+
   <!-- 5 -->
   <section class="slide">
     <div class="wrap">
@@ -417,58 +500,6 @@
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum">06 / 09</div>
-  </section>
-
-  <!-- 7 -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="kicker">Ключевая инициатива</div>
-      <h2>Конвейер one-pager на базе ИИ</h2>
-      <p class="sub">Формат: одностраничное резюме к большому отчёту, сам отчёт остаётся. Розница читает саммари — глубина сохраняется.</p>
-      <div class="flow">
-        <div class="step purple"><div class="st">ИИ</div><h4>Генерация резюме</h4><p>Черновик one-pager из полного отчёта.</p></div>
-        <div class="arrow">→</div>
-        <div class="step teal"><div class="st">Аналитик</div><h4>Проверка фактов</h4><p>Смысл и рекомендация — его ответственность.</p></div>
-        <div class="arrow">→</div>
-        <div class="step navy"><div class="st">Редактор</div><h4>Доводка подачи</h4><p>Ясность и формат под розницу.</p></div>
-        <div class="arrow">→</div>
-        <div class="step amber"><div class="st">Выпуск</div><h4>Публикация</h4><p>Готовый one-pager клиенту.</p></div>
-      </div>
-      <div class="note">Качество ИИ-резюме меряется автоматически (LLM-as-judge: релевантность, формат, тон) — дёшево и снимает вопрос ручного балла за качество.</div>
-    </div>
-    <div class="foot">БКС · Система мотивации ДИА 2026</div>
-    <div class="snum">07 / 09</div>
-  </section>
-
-  <!-- инициативы развития -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="kicker">Пилар 3 · развитие</div>
-      <h2>Инициативы развития 2026 — и почему это не ИИ</h2>
-      <p class="sub">Инициатива — разовый проект с дедлайном и владельцем, двигающий дирекцию вперёд. Это не текущий выпуск контента, а изменение. Сейчас почти все инициативы — вокруг ИИ, но меряются они иначе.</p>
-      <div class="grid g2" style="margin-top:30px">
-        <div class="card amber">
-          <h3>Примеры инициатив</h3>
-          <ul>
-            <li>Переход розничных отчётов на one-pager к Q3</li>
-            <li>Расширение покрытия эмитентов через фабрику</li>
-            <li>Запуск факторного рейтинга BCS Rating в прод</li>
-            <li>Налаживание сбора индивидуального CSI</li>
-            <li>Внедрение системы измерения качества (LLM-as-judge)</li>
-          </ul>
-        </div>
-        <div class="card purple">
-          <h3>Инициатива ≠ ИИ: один проект — два замера</h3>
-          <ul>
-            <li><b>Инициатива (пилар 3):</b> разовый проект доведён до вехи в срок — «доля отчётов на one-pager → Х% к Q3»</li>
-            <li><b>ИИ (пилар 4):</b> постоянная способность используется — «резюме генерятся ИИ, покрытие Y%, время на отчёт ↓»</li>
-          </ul>
-          <p style="margin-top:12px">Поэтому пилары не сливаем: инициативы меряют вехи, ИИ — постоянный результат. Задвоения нет.</p>
-        </div>
-      </div>
-    </div>
-    <div class="foot">БКС · Система мотивации ДИА 2026</div>
-    <div class="snum"></div>
   </section>
 
   <!-- 8 -->
@@ -566,7 +597,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v25</span>
+  <span class="ver">v26</span>
 </div>
 
 <script>
