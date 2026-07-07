@@ -70,9 +70,9 @@
   .legend span{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;color:var(--ink)}
   .dot{width:14px;height:14px;border-radius:5px;display:inline-block}
   .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)} .d6{background:var(--forest)}
-  .wrow{display:grid;grid-template-columns:230px 1fr 162px;align-items:center;gap:22px;margin-top:16px}
+  .wrow{display:grid;grid-template-columns:230px 1fr 162px;align-items:center;gap:22px;margin-top:9px}
   .wrow .rl{font-size:19px;font-weight:700;text-align:right}
-  .wbar{display:flex;height:46px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
+  .wbar{display:flex;height:40px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
   .wbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px}
   .wbar .s1{background:var(--navy)} .wbar .s2{background:var(--teal)} .wbar .s3{background:var(--amber)} .wbar .s4{background:var(--purple)} .wbar .s5{background:var(--coral)} .wbar .s6{background:var(--forest)}
   .dense .card h3{font-size:19px;margin-bottom:6px}
@@ -129,7 +129,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v66 · 07.07 18:00 МСК</div>
+<div class="build" id="build">сборка v67 · 07.07 18:06 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -186,6 +186,8 @@
       <div class="wrow"><div class="rl">Аналитики</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div><span style="align-self:center;justify-self:start;display:inline-flex;align-items:center;gap:6px;background:#FDF1F3;border:1.5px solid var(--coral);border-radius:9px;padding:5px 12px;white-space:nowrap;box-shadow:0 1px 4px rgba(224,86,107,.18)"><span style="font-size:18px;font-weight:900;color:var(--coral);line-height:1">×</span><span style="display:flex;flex-direction:column;line-height:1.12"><span style="font-size:12.5px;font-weight:800;color:var(--coral)">гигиена</span><span style="font-size:10px;font-weight:600;color:var(--coral);opacity:.85">дисконт до 40%</span></span></span></div>
       <div class="wrow"><div class="rl">Классы активов</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
       <div class="wrow"><div class="rl">Редакторы</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Руководитель продаж</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:13px;font-weight:600">на проработке</div></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Продуктовики</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:13px;font-weight:600">на проработке</div></div>
       <div class="note">Веса — черновик, на обсуждение. Поверх итога — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -825,7 +827,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v66</span>
+  <span class="ver">v67</span>
 </div>
 
 <script>
