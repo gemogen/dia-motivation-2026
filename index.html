@@ -129,7 +129,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v52 · 07.07 15:33 МСК</div>
+<div class="build" id="build">сборка v53 · 07.07 16:29 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -683,6 +683,19 @@
     <div class="snum"></div>
   </section>
 
+  <!-- аналитическая гигиена -->
+  <section class="slide dense">
+    <div class="wrap">
+      <div class="sect" style="background:var(--coral)"><span class="sdot"></span>Дисконт · только аналитики</div>
+      <h2>Аналитическая гигиена</h2>
+      <p class="sub">Дисциплинарный дисконт: не награждает сильных, а отсекает недисциплинированность. Три пункта, каждый со своим максимальным вычетом.</p>
+      <div style="display:flex;gap:14px;margin-top:14px"><div style="flex:1;background:#fff;border:1px solid var(--line);border-top:4px solid var(--coral);border-radius:12px;padding:14px 16px"><div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:34px;font-weight:900;color:var(--coral);line-height:1">−20%</span></div><div style="font-size:15px;font-weight:800;color:var(--ink);margin:6px 0 3px">1. Отчёты вовремя</div><div style="font-size:12.5px;color:var(--muted);line-height:1.4">% публикаций, вышедших в срок. Базовая дисциплина — потому и весит вдвое.</div></div><div style="flex:1;background:#fff;border:1px solid var(--line);border-top:4px solid var(--coral);border-radius:12px;padding:14px 16px"><div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:34px;font-weight:900;color:var(--coral);line-height:1">−10%</span></div><div style="font-size:15px;font-weight:800;color:var(--ink);margin:6px 0 3px">2. Реакция на конфликт</div><div style="font-size:12.5px;color:var(--muted);line-height:1.4">Среднее время реакции на конфликт целевой цены и рекомендации или на trade idea alert (сигнал по идее).</div></div><div style="flex:1;background:#fff;border:1px solid var(--line);border-top:4px solid var(--coral);border-radius:12px;padding:14px 16px"><div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:34px;font-weight:900;color:var(--coral);line-height:1">−10%</span></div><div style="font-size:15px;font-weight:800;color:var(--ink);margin:6px 0 3px">3. Первый взгляд (first take)</div><div style="font-size:12.5px;color:var(--muted);line-height:1.4">Время реакции на выход финотчётности эмитента + % покрытых отчётностей.</div></div></div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">−</span>Как работает дисконт</div><div class="calc-f">Итоговый бонус аналитика = (бонус по KPI-карте) × (1 − дисконт гигиены)</div><div class="calc-d">Суммарный дисконт — до <b>40%</b> годовой целевой компенсации (крайний случай «всё плохо»; типично — до ~15%). Удерживается <b>из квартальных бонусов</b> по ходу года. Удержанное <b>перераспределяется между аналитиками с чистой гигиеной</b> — пул не теряется, а достаётся дисциплинированным. Применяется <b>только к аналитикам</b>.</div></div>
+    </div>
+    <div class="foot">БКС · Система мотивации ДИА 2026</div>
+    <div class="snum"></div>
+  </section>
+
   <!-- разделитель: доп материалы -->
   <section class="slide" style="background:linear-gradient(135deg,#1F3A5F,#2C4E73)">
     <div class="wrap" style="text-align:center">
@@ -799,7 +812,7 @@
         <div class="q"><span class="n">9</span><div><b>Коммерческие метрики</b> Директора по продукту — внутри «качества» или отдельный блок?</div></div>
         <div class="q"><span class="n">10</span><div><b>Руководитель продаж</b> в карте ДИА — остаётся или это кросс-роль?</div></div>
         <div class="q"><span class="n">11</span><div><b>SLA-ревью — формат и частота:</b> как было (с каждой фабрикой отдельно) или 3 встречи (бизнес-колонны · рук. колонны · рук. фабрик и продуктовики)? Месяц / квартал.</div></div>
-        <div class="q"><span class="n">12</span><div><b>Аналитическая гигиена — отдельный компонент?</b> % отчётов вовремя · покрытие важных новостей по эмитентам · отсутствие конфликтов целевой цены и рекомендации. Порогом или баллом?</div></div>
+        <div class="q"><span class="n">12</span><div><b>Аналитическая гигиена — финализировать пороги.</b> Дисконт до 40% (типично ~15%): отчёты −20%, конфликт −10%, first take −10%. Из квартальных бонусов, перераспределение внутри аналитиков.</div></div>
       </div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -833,7 +846,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v52</span>
+  <span class="ver">v53</span>
 </div>
 
 <script>
