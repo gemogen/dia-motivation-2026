@@ -131,7 +131,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v73 · 07.07 18:49 МСК</div>
+<div class="build" id="build">сборка v74 · 07.07 18:55 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -283,15 +283,19 @@
             <li><b>Sell / Негативный взгляд</b>: цена ≤ 110% от целевой → попал</li>
             <li><b>Hold / Нейтральный взгляд</b>: цена в диапазоне 90–110% от целевой → попал</li>
           </ul>
-          <p style="margin-top:14px"><b>Пример аннуализации:</b> вход 100₽, целевая 130₽, срок 6 мес. Цена на конец — 112₽. Аннуализированный тренд → ~125₽. Порог 117₽ (90%). Тренд > порога → <b>попал</b>.</p>
-          <div style="margin-top:14px;background:#FFF8EC;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:11px 14px">
+          <p style="margin-top:10px"><b>Пример аннуализации:</b> вход 100₽, целевая 130₽, срок 6 мес. Цена на конец — 112₽. Аннуализированный тренд → ~125₽. Порог 117₽ (90%). Тренд > порога → <b>попал</b>.</p>
+          <div style="margin-top:10px;background:#FFF8EC;border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:11px 14px">
             <b style="color:var(--amber);font-size:13px">Предложение — корзинный подход</b>
             <p style="font-size:13px;color:var(--ink);margin:3px 0 0;line-height:1.4">«Против рынка» считать не по каждой идее, а на уровне <b>корзины</b>: все Buy — опережение рынка, все Sell — отставание. Портфельный взгляд на альфу.</p>
           </div>
         </div>
       </div>
+      <div style="margin-top:8px;background:#EAF0F7;border-left:4px solid var(--navy);border-radius:0 10px 10px 0;padding:9px 15px">
+        <b style="color:var(--navy);font-size:14px">Валюта и макроэкономика — своя метрика качества</b>
+        <p style="font-size:13px;color:var(--ink);margin:3px 0 0;line-height:1.45">Для макро- и валютных аналитиков качество считается не через таргет цены, а через <b>точность ключевых прогнозов на горизонте года</b>: инфляция · ставка ЦБ · рост ВВП. Замер — факт против прогноза через год.</p>
+      </div>
     </div>
-      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">hit-rate = идеи, попавшие в цель ÷ все оценённые идеи за период</div><div class="calc-d"><b>Критерии попадания:</b> Buy ≥ 90% целевой · Sell ≤ 110% · Hold 90–110%. <b>Замер</b> — на конец срока по цене закрытия дня, в полной доходности (с дивидендами). <b>Незакрытые идеи</b> — фактический рост аннуализируется (оценка тренда к цели). Минимум 1 месяц. <b>Источник данных:</b> Bloomberg + внутренний трекинг идей.</div></div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">hit-rate = идеи, попавшие в цель ÷ все оценённые идеи за период</div><div class="calc-d"><b>Критерии попадания:</b> Buy ≥ 90% целевой · Sell ≤ 110% · Hold 90–110%. <b>Замер</b> — на конец срока по цене закрытия дня, в полной доходности (с дивидендами). <b>Незакрытые идеи</b> — фактический рост аннуализируется (оценка тренда к цели). Минимум 1 месяц. <b>Валюта/макро</b> — вместо таргета цены точность годовых прогнозов (инфляция, ставка ЦБ, ВВП). <b>Источник данных:</b> Bloomberg + внутренний трекинг идей.</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum"></div>
   </section>
@@ -502,8 +506,12 @@
           <p style="font-size:12.5px;color:var(--muted);margin-top:8px">Логика: где больше ресурсов дирекции — тот голос весит больше. Веса — из аллокации 2026 (след. слайд).</p>
         </div>
       </div>
+      <div style="margin-top:12px;background:#F0FBF7;border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:11px 16px">
+        <b style="color:var(--teal);font-size:14px">CSI аналитика — по его центру</b>
+        <p style="font-size:13px;color:var(--ink);margin:3px 0 0;line-height:1.45">Индивидуального CSI нет — аналитик получает CSI своего центра. Пять центров: <b>акции РФ · акции Мир · облигации · макроэкономика · стратегии</b>.</p>
+      </div>
     </div>
-      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">CSI = 50% Исполнение SLA + 50% Индекс удовлетворённости</div><div class="calc-d"><b>SLA</b> — доля выполненных сервисных обязательств (4 типа: объём, активность, продукт, performance); контроль: Дубай ежемесячно, остальные квартально. <b>Индекс</b> — оценка 1–5 неанонимно, средневзвешенная по аллокации затрат: индекс колонны = Σ(оценка бизнеса × доля затрат бизнеса); KPI по БКС = Σ(индекс колонны × доля затрат колонны).</div></div>
+      <div class="calc"><div class="calc-head"><span class="calc-ico">Σ</span>Как считается</div><div class="calc-f">CSI = 50% Исполнение SLA + 50% Индекс удовлетворённости</div><div class="calc-d"><b>SLA</b> — доля выполненных сервисных обязательств (4 типа: объём, активность, продукт, performance); контроль: Дубай ежемесячно, остальные квартально. <b>Индекс</b> — оценка 1–5 неанонимно, средневзвешенная по аллокации затрат: индекс колонны = Σ(оценка бизнеса × доля затрат бизнеса); KPI по БКС = Σ(индекс колонны × доля затрат колонны). <b>CSI аналитика</b> — по его центру (акции РФ, акции Мир, облигации, макроэкономика, стратегии), индивидуального нет.</div></div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
     <div class="snum"></div>
   </section>
@@ -833,7 +841,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v73</span>
+  <span class="ver">v74</span>
 </div>
 
 <script>
