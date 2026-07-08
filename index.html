@@ -70,7 +70,7 @@
   .legend span{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;color:var(--ink)}
   .dot{width:14px;height:14px;border-radius:5px;display:inline-block}
   .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)} .d6{background:var(--forest)}
-  .wrow{display:grid;grid-template-columns:230px 34px 1fr;align-items:center;gap:12px;margin-top:3px}
+  .wrow{display:grid;grid-template-columns:225px 30px 1fr 150px;align-items:center;gap:11px;margin-top:3px}
   .wrow .rl{font-size:14px;font-weight:700;text-align:right;line-height:1.1}
   .wrow .rc{font-size:14px;font-weight:800;color:var(--navy);text-align:center}
   .wrow .rc small{font-size:10px;color:var(--muted);font-weight:600;display:block;margin-top:-2px}
@@ -131,7 +131,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v76 · 08.07 10:33 МСК</div>
+<div class="build" id="build">сборка v77 · 08.07 11:37 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -182,21 +182,19 @@
         <span><i class="dot d5"></i>Решение руководителя</span>
         <span><i class="dot d6"></i>Результат портфелей</span>
       </div>
-      <div style="margin:8px 0 3px;font-size:12.5px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Аналитические роли · 19 чел.</div>
-      <div class="wrow"><div class="rl">Глава дирекции</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div></div>
-      <div class="wrow"><div class="rl">Руководитель развития проектов</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div></div>
-      <div class="wrow"><div class="rl">Руководитель центра РФ</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
-      <div class="wrow"><div class="rl">Руководитель центра Мир</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
-      <div class="wrow"><div class="rl">Аналитик</div><div class="rc">13</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
-      <div class="wrow"><div class="rl">Аналитик · Классы активов</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div></div>
-      <div class="wrow"><div class="rl">Портфельный аналитик</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:50%">50</span><span class="s1" style="width:15%">15</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:10%">10</span><span class="s4" style="width:5%">5</span></div></div>
-      <div style="margin:8px 0 3px;font-size:12.5px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Остальные роли · 13 чел.</div>
-      <div class="wrow"><div class="rl" style="color:var(--muted)">Руководитель продаж</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
-      <div class="wrow"><div class="rl" style="color:var(--muted)">Директор по продукту</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
-      <div class="wrow"><div class="rl" style="color:var(--muted)">Аналитик · Качество продукта</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
-      <div class="wrow"><div class="rl">Редактор-переводчик</div><div class="rc">9</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div></div>
-      <div class="wrow"><div class="rl" style="color:var(--muted)">Аналитик · Качество продукта 1</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div></div>
-      <div style="display:grid;grid-template-columns:240px 38px 1fr;gap:14px;align-items:center;margin-top:8px;padding-top:6px;border-top:2px solid var(--navy)"><div style="text-align:right;font-size:15px;font-weight:900;color:var(--navy)">Итого</div><div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy)">32</div><div style="font-size:13px;color:var(--muted);font-weight:600">12 ролей · 32 человека</div></div>
+      <div style="margin:8px 0 3px;font-size:12.5px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Аналитические роли · 18 чел.</div>
+      <div class="wrow"><div class="rl">Глава дирекции</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div><span></span></div>
+      <div class="wrow"><div class="rl">Руководитель развития проектов</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div><span></span></div>
+      <div class="wrow"><div class="rl">Руководитель центра аналитики</div><div class="rc">3</div><div class="wbar"><span class="s1" style="width:45%">45</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div><span></span></div>
+      <div class="wrow"><div class="rl">Аналитик акций/облигаций</div><div class="rc">10</div><div class="wbar"><span class="s1" style="width:50%">50</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div><span style="align-self:center;display:inline-flex;align-items:center;gap:5px;background:#FDF1F3;border:1.5px solid var(--coral);border-radius:8px;padding:3px 9px;white-space:nowrap"><span style="font-size:15px;font-weight:900;color:var(--coral);line-height:1">×</span><span style="display:flex;flex-direction:column;line-height:1.08"><span style="font-size:11px;font-weight:800;color:var(--coral)">гигиена</span><span style="font-size:9px;font-weight:600;color:var(--coral);opacity:.85">до 40%</span></span></span></div>
+      <div class="wrow"><div class="rl">Стратег по классам активов</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div><span></span></div>
+      <div class="wrow"><div class="rl">Управляющий акции РФ</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:50%">50</span><span class="s1" style="width:15%">15</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:10%">10</span><span class="s4" style="width:5%">5</span></div><span></span></div>
+      <div class="wrow"><div class="rl">Аналитик по продуктам БКС</div><div class="rc">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div><span></span></div>
+      <div style="margin:8px 0 3px;font-size:12.5px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Остальные роли · 8 чел.</div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Руководитель продаж</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div><span></span></div>
+      <div class="wrow"><div class="rl" style="color:var(--muted)">Директор по продукту</div><div class="rc" style="color:var(--muted)">1</div><div class="wbar" style="background:#F4F6F9;box-shadow:inset 0 0 0 1px rgba(20,35,59,.08);align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600">веса на проработке</div><span></span></div>
+      <div class="wrow"><div class="rl">Группа выпуска</div><div class="rc">6</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div><span></span></div>
+      <div style="display:grid;grid-template-columns:225px 30px 1fr;gap:11px;align-items:center;margin-top:8px;padding-top:6px;border-top:2px solid var(--navy)"><div style="text-align:right;font-size:15px;font-weight:900;color:var(--navy)">Итого</div><div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy)">26</div><div style="font-size:13px;color:var(--muted);font-weight:600">10 ролей · 26 человек</div></div>
       <div class="note">Все 15 ролей дирекции, 32 человека. Число — сотрудников в роли. Пустые бары — веса ещё не заданы. У аналитиков поверх итога действует дисконт «аналитическая гигиена» (отдельный слайд). Веса — черновик; поверх — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -844,7 +842,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v76</span>
+  <span class="ver">v77</span>
 </div>
 
 <script>
