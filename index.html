@@ -66,7 +66,7 @@
   .card.navy li:before{background:var(--navy)} .card.amber li:before{background:var(--amber)} .card.purple li:before{background:var(--purple)}
   .hero-n{position:absolute;right:22px;top:6px;font-size:clamp(90px,11vw,132px);font-weight:900;line-height:1;color:rgba(20,35,59,.055)}
   /* weight bars */
-  .legend{display:flex;gap:14px 18px;flex-wrap:wrap;margin:10px 0 4px}
+  .legend{display:flex;gap:12px 16px;flex-wrap:wrap;margin:6px 0 3px}
   .legend span{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--ink)}
   .dot{width:14px;height:14px;border-radius:5px;display:inline-block}
   .d1{background:var(--navy)} .d2{background:var(--teal)} .d3{background:var(--amber)} .d4{background:var(--purple)} .d5{background:var(--coral)} .d6{background:var(--forest)}
@@ -75,7 +75,7 @@
   .wrow .rl{font-size:14px;font-weight:700;text-align:right;line-height:1.1}
   .wrow .rc{font-size:14px;font-weight:800;color:var(--navy);text-align:center}
   .wrow .rc small{font-size:10px;color:var(--muted);font-weight:600;display:block;margin-top:-2px}
-  .wbar{display:flex;height:17px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
+  .wbar{display:flex;height:16px;border-radius:11px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(20,35,59,.04)}
   .wbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:11px}
   .wbar .s1{background:var(--navy)} .wbar .s2{background:var(--teal)} .wbar .s3{background:var(--amber)} .wbar .s4{background:var(--purple)} .wbar .s5{background:var(--coral)} .wbar .s6{background:var(--forest)}
   .dense .card h3{font-size:19px;margin-bottom:6px}
@@ -132,7 +132,7 @@
 </head>
 <body>
 <div class="bar"><i id="prog"></i></div>
-<div class="build" id="build">сборка v88 · 08.07 19:12 МСК</div>
+<div class="build" id="build">сборка v89 · 08.07 19:18 МСК</div>
 
 <div class="deck" id="deck">
 
@@ -182,9 +182,6 @@
         <span><i class="dot d4"></i>ИИ</span>
         <span><i class="dot d5"></i>Решение руководителя</span>
         <span><i class="dot d6"></i>Результат портфелей</span>
-        <span><i class="dot d7"></i>Оборот по идеям</span>
-        <span><i class="dot d8"></i>Заводы по идеям</span>
-        <span><i class="dot d9"></i>Уник. пользователи</span>
       </div>
       <div style="margin:5px 0 2px;font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Аналитические роли · 20 чел.</div>
       <div class="wrow"><div class="rl">Глава дирекции</div><div class="rc">1</div><div class="wbar"><span class="s1" style="width:40%">40</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:20%">20</span><span class="s4" style="width:20%">20</span></div><span></span></div>
@@ -195,12 +192,15 @@
       <div class="wrow"><div class="rl">Стратег по классам активов</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:30%">30</span><span class="s1" style="width:20%">20</span><span class="s2" style="width:25%">25</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:10%">10</span></div><span></span></div>
       <div class="wrow"><div class="rl">Управляющий акции РФ</div><div class="rc">1</div><div class="wbar"><span class="s6" style="width:50%">50</span><span class="s1" style="width:15%">15</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:10%">10</span><span class="s4" style="width:5%">5</span></div><span></span></div>
       <div class="wrow"><div class="rl">Аналитик по продуктам БКС</div><div class="rc">1</div><div class="wbar"><span class="s5" style="width:40%">40</span><span class="s2" style="width:30%">30</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div><span></span></div>
-      <div style="margin:5px 0 2px;font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Остальные роли · 8 чел.</div>
+      <div style="margin:5px 0 2px;font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--line);padding-bottom:2px">Остальные роли · 7 чел.</div>
       <div class="wrow"><div class="rl">Руководитель продаж</div><div class="rc">1</div><div class="wbar"><span class="s5" style="width:30%">30</span><span class="s2" style="width:70%">70</span></div><span></span></div>
-      <div class="wrow"><div class="rl">Директор по продукту</div><div class="rc">1</div><div class="wbar"><span style="width:25%;background:#D81B60">25</span><span style="width:25%;background:#00897B">25</span><span style="width:25%;background:#5E35B1">25</span><span style="width:25%;background:var(--teal)">25</span></div><span></span></div>
       <div class="wrow"><div class="rl">Группа выпуска</div><div class="rc">6</div><div class="wbar"><span class="s5" style="width:50%">50</span><span class="s2" style="width:20%">20</span><span class="s3" style="width:15%">15</span><span class="s4" style="width:15%">15</span></div><span></span></div>
-      <div style="display:grid;grid-template-columns:225px 30px 1fr;gap:11px;align-items:center;margin-top:5px;padding-top:4px;border-top:2px solid var(--navy)"><div style="text-align:right;font-size:15px;font-weight:900;color:var(--navy)">Итого</div><div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy)">28</div><div style="font-size:13px;color:var(--muted);font-weight:600">11 ролей · 28 человек</div></div>
-      <div style="font-size:10.5px;color:var(--muted);margin-top:3px"><b style="color:#D81B60">Директор по продукту</b> — продуктовые метрики по 25%: оборот по инвестидеям · заводы по инвестидеям · уникальные пользователи · CSI по аналитике и инвестидеям.</div>
+      <div style="display:grid;grid-template-columns:225px 30px 1fr;gap:11px;align-items:center;margin-top:4px;padding-top:3px;border-top:2px solid var(--navy)"><div style="text-align:right;font-size:15px;font-weight:900;color:var(--navy)">Итого</div><div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy)">28</div><div style="font-size:13px;color:var(--muted);font-weight:600">11 ролей · 28 человек</div></div>
+      <div style="margin-top:6px;border:1.5px solid #D81B60;border-radius:9px;padding:5px 13px;background:#FFF5F8">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px"><b style="color:#D81B60;font-size:13px">Директор по продукту · 1 чел — продуктовые метрики</b><span style="font-size:11px;color:var(--muted)">по 25% каждая</span></div>
+        <div class="wbar" style="height:18px"><span style="width:25%;background:#D81B60">25</span><span style="width:25%;background:#00897B">25</span><span style="width:25%;background:#5E35B1">25</span><span style="width:25%;background:var(--teal)">25</span></div>
+        <div style="display:flex;gap:16px;margin-top:4px;font-size:11.5px;flex-wrap:wrap"><span style="display:flex;align-items:center"><i style="width:11px;height:11px;border-radius:3px;display:inline-block;background:#D81B60;margin-right:6px"></i>Оборот по идеям</span><span style="display:flex;align-items:center"><i style="width:11px;height:11px;border-radius:3px;display:inline-block;background:#00897B;margin-right:6px"></i>Заводы по идеям</span><span style="display:flex;align-items:center"><i style="width:11px;height:11px;border-radius:3px;display:inline-block;background:#5E35B1;margin-right:6px"></i>Уник. пользователи</span><span style="display:flex;align-items:center"><i style="width:11px;height:11px;border-radius:3px;display:inline-block;background:var(--teal);margin-right:6px"></i>CSI аналитики и идей</span></div>
+      </div>
       <div class="note">Все 11 ролей дирекции, 28 человек. Число — сотрудников в роли. Пустые бары — веса ещё не заданы. У аналитиков поверх итога действует дисконт «аналитическая гигиена» (отдельный слайд). Веса — черновик; поверх — множители «оценка руководителя» (кэп 120%) и «операционная прибыль».</div>
     </div>
     <div class="foot">БКС · Система мотивации ДИА 2026</div>
@@ -749,7 +749,7 @@
   <span class="cnt"><span id="cur">01</span> / <span id="tot">10</span></span>
   <button id="next" title="Вперёд">›</button>
   <button id="reload" title="Обновить">⟳</button>
-  <span class="ver">v88</span>
+  <span class="ver">v89</span>
 </div>
 
 <script>
